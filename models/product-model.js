@@ -5,11 +5,11 @@ const productSchema = new Schema({
     name: String,
     price: Number,
     imageUrl: String,
-    description: String,
     ownedBy: {
         type: Schema.Types.ObjectId,
         ref: 'Shop'
-    }
+    },
+    description: String
 });
 
 const Product = mongoose.model('Product', productSchema);

@@ -57,9 +57,9 @@ router.put('/shops/:id', (req, res) => {
 
 router.post('/shops', (req, res) => {
   const { shopName, imageUrl, productList, ownedBy } = req.body;
-  console.log('this',req.body)
+  console.log('this', req.body)
 
-  if (!shopName ) {
+  if (!shopName) {
     res.status(400).json('Missing fields');
     return;
   }

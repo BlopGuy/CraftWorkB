@@ -56,20 +56,21 @@ router.put('/products/:id', (req, res) => {
 });
 
 router.post('/products', (req, res) => {
-  const { name, price, imageUrl, minimumOrder, description } = req.body;
+  const { name, price, imageUrl, description, ownedBy } = req.body;
   console.log(req.body)
 
-  if (!name || !imageUrl || !minimumOrder || !description || !price) {
+  if (!name || !imageUrl || !price) {
     res.status(400).json('Missing fields');
     return;
   }
+  
   Product
     .create({
       name,
       price,
       imageUrl,
-      minimumOrder,
-      description
+      description,
+      ownedBy
     })
     .then((response) => {
       res.status(200).json(response);

@@ -8,7 +8,6 @@ const shopSchema = new Schema({
     required: true,
     unique: true
   },
-  imageUrl: String,
   productList: [{
     type: Schema.Types.ObjectId,
     ref: 'Product'
@@ -16,27 +15,9 @@ const shopSchema = new Schema({
   ownedBy: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-  }
-});
-/*
-const shopSchema = new Schema({
-  shopName: {
-    type: String,
-    trim: true,
-    required: [true, 'Shop name is required']
-   // unique: true
   },
-  imageUrl: String,
-  productList: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Product'
-  }],
-  ownedBy: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  }
+  imageUrl: String
 });
-*/
 const Shop = mongoose.model('Shop', shopSchema);
 
 module.exports = Shop;

@@ -34,7 +34,7 @@ router.post('/signup', (req, res) => {
         username,
         password: hashPassword,
         credits: 100,
-        Shop: null
+        shoppingCart: []
       }).then((response) => {
         res.status(200).json(response)
       }).catch((error) => {
