@@ -22,7 +22,8 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Shop'
   },
-  credits: Number
+  credits: Number,
+  imageUrl: String
 });
 
 const User = mongoose.model('User', userSchema);

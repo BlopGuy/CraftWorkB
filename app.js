@@ -40,9 +40,9 @@ app
   saveUninitialed: true,
   resave: true,
   cookie: {
-    sameSite: 'none', // true,
-    secure: true, // false,
-    httpOnly: false, // true,
+    sameSite: 'true', // true,
+    secure: false, // false,
+    httpOnly: true, // true,
     maxAge: 60000
   },
   rolling: true
